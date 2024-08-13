@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class OddShould {
 
-    @Property
+    @Property(generation = GenerationMode.EXHAUSTIVE)
     @Report(Reporting.GENERATED)
     public void give_odd_number_return_true(@ForAll("oddNumbers") int value) {
         Odd odd = new Odd(value);
